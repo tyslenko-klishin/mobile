@@ -4,35 +4,26 @@ module.exports = {
   description: 'Андрей Григорьевич Тысленко, сайт эксперта, описание мастер классов и полезные статьи по менеджменту и управлению персоналом',
 
   themeConfig: {
-    repo: 'vuejs/vitepress',
+    repo: 'tyslenko-klishin/mobile',
     docsDir: 'docs',
 
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub',
-    lastUpdated: 'Last Updated',
+    editLinkText: 'Предложить изминения этой страницы',
+    lastUpdated: 'Версия от ',
 
-    algolia: {
-      apiKey: 'c57105e511faa5558547599f120ceeba',
-      indexName: 'vitepress'
-    },
+    //algolia: {
+      //apiKey: 'c57105e511faa5558547599f120ceeba',
+      //indexName: 'vitepress'
+    //},
 
-    carbonAds: {
-      carbon: 'CEBDT27Y',
-      custom: 'CKYD62QM',
-      placement: 'vuejsorg'
-    },
+    //carbonAds: {
+      //carbon: 'CEBDT27Y',
+      //custom: 'CKYD62QM',
+      //placement: 'vuejsorg'
+    //},
 
     nav: [
       { text: 'Guide', link: '/', activeMatch: '^/$|^/guide/' },
-      {
-        text: 'Config Reference',
-        link: '/config/basics',
-        activeMatch: '^/config/'
-      },
-      {
-        text: 'Release Notes',
-        link: 'https://github.com/vuejs/vitepress/releases'
-      }
     ],
 
     sidebar: {
@@ -45,28 +36,30 @@ module.exports = {
 
 function getGuideSidebar() {
   return [
-    {
-      text: 'Introduction',
-      children: [
-        { text: 'What is VitePress?', link: '/' },
-        { text: 'Getting Started', link: '/guide/getting-started' },
-        { text: 'Configuration', link: '/guide/configuration' },
-        { text: 'Asset Handling', link: '/guide/assets' },
-        { text: 'Markdown Extensions', link: '/guide/markdown' },
-        { text: 'Using Vue in Markdown', link: '/guide/using-vue' },
-        { text: 'Deploying', link: '/guide/deploy' }
+    { text: 'Андрей Тысленко', link: '/about' },      
+    { text: 'Открытые семинары',
+		children: [
+        { text: 'Бизнес и кризис', link: '/busness-crisis/' },
+        { text: 'Владелец и топ-менеджмент', link: '/owner-top-manager/' },
+        { text: 'Менеджмент в интересах собственника', link: '/owners-interest/' },
+        { text: 'Генеральный директор', link: '/general-manager/' },
+        { text: 'Профессиональный HR', link: '/pro-hr/' },
+        { text: 'Специалист БИМС', link: '/bims/' },
+        { text: 'Бизнес дети', link: '/business-children/' },
+        { text: 'Методы повышения эффективности подбора и оценки персонала', link: '/hiring-methods/' }
       ]
-    },
-    {
-      text: 'Advanced',
-      children: [
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        { text: 'Theming', link: '/guide/theming' },
-        { text: 'API Reference', link: '/guide/api' },
-        {
-          text: 'Differences from Vuepress',
-          link: '/guide/differences-from-vuepress'
-        }
+    },    
+    { text: 'Корпоративное обучение',
+		children: [
+        { text: 'Эффективное управление предприятием в современных условиях', link: '/managing-business/' },
+        { text: 'Управление холдинговыми образованиями', link: '/holding-management/' },
+        { text: 'Сессия стратегического планирования', link: '/strategic-planning/' }
+      ]
+    },    
+    { text: 'Онлайн-курсы',
+		children: [
+        { text: 'Рациональное управление', link: '/rational-management/' },
+        { text: 'Специалист БИМС онлайн', link: '/bims-online/' }
       ]
     }
   ]
